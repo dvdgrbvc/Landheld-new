@@ -8,6 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/", router);
 
+app.listen(5000, () => console.log("Server Running"));
 if (process.env.NODE_ENV === "production") {
   //   // dbParams.connectionString = process.env.DATABASE_URL;
   //   // dbParams.ssl = { rejectUnauthorized: false };
@@ -15,9 +16,6 @@ if (process.env.NODE_ENV === "production") {
   //   //npm run build
   app.use(express.static(path.join(__dirname, "client/build")));
 }
-
-app.listen(5000, () => console.log("Server Running"));
-
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
   auth: {
