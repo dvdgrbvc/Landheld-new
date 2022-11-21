@@ -1,1 +1,2 @@
-fucntions= "functions"
+[build]
+  functions = "server/functions"
