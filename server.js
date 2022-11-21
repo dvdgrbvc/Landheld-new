@@ -36,7 +36,6 @@ const contactEmail = nodemailer.createTransport({
       subject: "Contact Form Submission",
       html: `<p>Name: ${name}</p>
              <p>Email: ${email}</p>
-             <p>Betreff: ${subject} </p>
              <p>Message: ${message}</p>`,
     };
     contactEmail.sendMail(mail, (error) => {
